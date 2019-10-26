@@ -16,7 +16,7 @@ public class DatingApp {
 
         Arrays.stream(read.readLine().split("\\s+")).mapToInt(Integer::parseInt).forEach(females::offer);
 
-        int maches = 0;
+        int matches = 0;
 
         while (!males.isEmpty() && !females.isEmpty()) {
 
@@ -54,7 +54,7 @@ public class DatingApp {
 
                 males.pop();
                 females.poll();
-                maches++;
+                matches++;
 
             } else {
 
@@ -65,7 +65,7 @@ public class DatingApp {
             }
         }
 
-        System.out.println(String.format("Matches: %d", maches));
+        System.out.println(String.format("Matches: %d", matches));
 
         if (males.size()>0){
 
